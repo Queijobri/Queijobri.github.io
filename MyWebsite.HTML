@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Palmer | Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s, color 0.3s;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #333;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        .dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+        .dark-mode section {
+            background: #1e1e1e;
+        }
+        .dark-mode nav, .dark-mode header, .dark-mode footer {
+            background: #000;
+        }
+        .toggle-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-button:hover {
+            background: #333;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <header>
+        <h1>Brian Palmer</h1>
+        <p>Physics Student | Researcher | Aspiring Particle Physicist</p>
+        <div class="social-icons">
+            <a href="www.linkedin.com/in/brian-palmer-bb060219a" target="_blank">LinkedIn</a>
+            <a href="mailto:brianpalmerii07@gmail.com">Email</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Brian Palmer, a physics student passionate about high-energy physics, condensed matter, and computational modeling. I have research experience in accelerator physics, positron annihilation spectroscopy, and charge transport simulations in organic semiconductors.</p>
+    </section>
+
+    <section id="research">
+        <h2>Research</h2>
+        <p>I have worked on projects at Lawrence Berkeley National Laboratory and the University of Kansas, focusing on accelerator technology and quantum mechanical modeling of energy conversion processes. My interests include Quantum Chromodynamics, neutrinos, and symmetry violations.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Organic Semiconductor Simulation</h3>
+                <p>Developed a Monte Carlo simulation to study charge dynamics in donor–acceptor systems for improved energy conversion efficiency.</p>
+            </div>
+            <div class="project-card">
+                <h3>Positron Annihilation Spectroscopy</h3>
+                <p>Led a team to investigate material defects using PAS, finding key insights on S-parameter behavior in glass barriers.</p>
+            </div>
+            <div class="project-card">
+                <h3>Accelerator Physics</h3>
+                <p>Worked on enhancing beam diagnostics and accelerator technology as part of the SULI internship at LBNL.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Brian Palmer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
